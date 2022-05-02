@@ -9,12 +9,18 @@ import UserRouter from "./UserRouter"
 import NotFound from "../pages/NotFound/NotFound"
 import AvisoVerificacion from "../pages/AvisoVerificacion"
 import RecuperarContraseña from "../pages/RecuperarContraseña"
+import "../styles/footer.scss"
+
 
 export default function AppRouter() {
     return (
+        <div className="main-container">
+        <div className="content-wrap">
+        
         <Router>
             <Header />
-            <div className="main-container">
+           
+            
             <Switch>
                 <PublicRoute exact path='/login' component={Login}/>
                 <PublicRoute exact path='/register' component={Register}/>
@@ -25,8 +31,14 @@ export default function AppRouter() {
                 <Route path='/404' component={NotFound}/>   
                 <Route path='*'><Redirect to='/404'/></Route>    
             </Switch>
+
+            </Router>
             </div>
-            <Footer />
-        </Router>
+            <Footer/>
+            </div>
+
+            
+        
+        
     )
 }

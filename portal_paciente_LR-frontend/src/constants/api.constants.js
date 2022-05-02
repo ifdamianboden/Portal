@@ -26,11 +26,51 @@ export let AUTH_HEADER = (tokenId) => {
 
 export const API_ENDPOINTS_LOGIN = `${baseUrl}/login`;
 
+//export const API_ENDPOINTS_CREATEMESSAGES = `${baseUrl}/createmessage?header=1&body=1&is_formatted=true`;
+
+export const API_ENDPOINTS_GETALLMESSAGES = `${baseUrl}/get-all-messages`;
+
+export const API_ENDPOINTS_UPDATEMESSAGE = `${baseUrl}/updatemessage`;
+
+export const API_ENDPOINTS_PERSONANDUSER = `${baseUrl}/createpersonanduser`;
+
 export const API_ENDPOINTS_INSTITUCIONES = `${baseUrl}/institutions/all`;
 
 export const API_ENDPOINTS_PARAMETRIC = `${baseUrl}/parametric/identificationtypes`;
 
 export const API_ENDPOINTS_PROVINCES = `${baseUrl}/parametric/provinces`;
+
+export const API_ENDPOINTS_GETMESSAGESBYPERSON = (person_id, only_unread) =>{
+  let url = `${baseUrl}/get-messages-by-person?person_id=${person_id}&only_unread=${only_unread}`;
+  return url;
+}
+
+export const API_ENDPOINTS_CREATEMESSAGES = (header,body,is_formatted) =>{
+  let url = `${baseUrl}/createmessage?header=${header}&body=${body}&is_formatted=${is_formatted}`;
+  return url;
+}
+
+export const API_ENDPOINTS_SETMESSAGEREAD = (person_id, message_id) =>{
+  let url = `${baseUrl}/setmessageread?person_id=${person_id}&message_id=${message_id}`;
+  return url;
+}
+
+
+export const API_ENDPOINTS_SUMAR = (dni_afiliado) =>{
+  let url = `${baseUrl}/sumar/data/${dni_afiliado}`;
+  return url;
+}
+
+export const API_ENDPOINTS_GETMESSAGES = (only_unread) =>{
+  let url = `${baseUrl}/getmessages?only_unread=${only_unread}`;
+  return url;
+}
+
+export const API_ENDPOINTS_POSTMESSAGES = (message_id) =>{
+  let url = `${baseUrl}/setmessagesread?message_id=${message_id}`;
+  return url;
+}
+
 
 export const API_ENDPOINTS_ALLERGIES = (institution_id, patient_id) =>{
   let url = `${baseUrl}/hcegeneral/${institution_id}/allergies/${patient_id}`;

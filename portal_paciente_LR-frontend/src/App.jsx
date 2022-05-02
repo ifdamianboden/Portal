@@ -9,8 +9,11 @@ function App() {
     <div className="App">
       <AuthProvider>
         <AppRouter/>
-      </AuthProvider>
+      </AuthProvider>,
+      
     </div>
+    
+  
   );
 }
 

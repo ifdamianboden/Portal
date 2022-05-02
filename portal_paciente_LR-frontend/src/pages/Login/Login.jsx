@@ -3,6 +3,7 @@ import { useHistory, useLocation, Link } from "react-router-dom";
 import { Container, Row, Col, Form, Button } from 'react-bootstrap';
 import { useForm } from "react-hook-form";
 import { ErrorMessage } from '../../components/ErrorMessage/ErrorMessage';
+import Footer from "../../components/Footer";
 import '../../styles/Transitions.scss'
 import useAuth from '../../hooks/useAuth';
 import chronic from "../../services/chronic";
@@ -20,6 +21,13 @@ import vitalSigns from "../../services/vitalSigns";
 import institutionsServices from "../../services/institutionsServices";
 import PatientbasicData from "../../services/patientBasicData";
 import PatientCompleteData from "../../services/patientCompleteData";
+import sumarServices from "../../services/sumarServices";
+import createMessages  from "../../services/createMessages";
+import getAllMessages from "../../services/getAllMessages";
+import createpersonanduser from "../../services/createPersonAndUser";
+import getByPerson from "../../services/getMessagesByPerson";
+import setMessageRead from "../../services/setMessage";
+import updateMessages from "../../services/updateMessage";
 
 
 // import { loginServiceFetch } from "../../services/loginService";
@@ -27,7 +35,7 @@ import PatientCompleteData from "../../services/patientCompleteData";
 
 function Login() {
 
-    PatientCompleteData(1,1,1);
+    updateMessages(1,1,false);
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const auth = useAuth();
@@ -184,6 +192,7 @@ function Login() {
                     </Col>
                 </Row>
             </Container>
+            
         </div>
 
     )
