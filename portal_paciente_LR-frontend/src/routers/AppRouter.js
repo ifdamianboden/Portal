@@ -10,6 +10,7 @@ import NotFound from "../pages/NotFound/NotFound"
 import AvisoVerificacion from "../pages/AvisoVerificacion"
 import RecuperarContraseña from "../pages/RecuperarContraseña"
 import "../styles/footer.scss"
+import Telefonos from "../pages/Telefonos"
 
 
 export default function AppRouter() {
@@ -24,6 +25,7 @@ export default function AppRouter() {
             <Switch>
                 <PublicRoute exact path='/login' component={Login}/>
                 <PublicRoute exact path='/register' component={Register}/>
+                <PublicRoute exact path='/telefonos' component={Telefonos}/>
                 <PublicRoute exact path='/verificacion' component={AvisoVerificacion}/>
                 <PublicRoute exact path='/recuperar-contraseña' component={RecuperarContraseña}/>
                 <PrivateRoute path='/usuario' component={UserRouter}/>   
