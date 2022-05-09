@@ -4,8 +4,11 @@ import "../../styles/telefonos.scss";
 
 export default function telefonos() {
     return (
+
+        
         
         <div className='main-telefonos'>
+            
             <div className="container">
                 <div className="row">
                     {/*colum1*/}
@@ -26,7 +29,7 @@ export default function telefonos() {
                         </ul>
                         <br />
                         <br />
-                        <br /><br />
+                        <br /><br /><br />
                     </div>
                     {/*colum2*/}
                     <div className="col">
