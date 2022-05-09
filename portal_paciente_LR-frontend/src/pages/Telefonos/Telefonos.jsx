@@ -9,9 +9,13 @@ export default function telefonos() {
             <div className="container">
                 <div className="row">
                     {/*colum1*/}
+                    <div className="encabezado">
+                        <h4>CONTACTO</h4>
+                    </div>
                     <div className="col">
                         <br />
-                        <h4>CONTACTO</h4>
+                       
+                        <br />
                         <ul className="list-unstyled">
                             <li>Dirección: Av. Ortiz de Ocampo 1700 -</li>
                             <li>Ciudad de La Rioja, Argentina</li>
@@ -20,7 +24,9 @@ export default function telefonos() {
                             <li>Horarios: Lunes a Viernes de 8.00 a</li>
                             <li>16.00 HS</li>
                         </ul>
-
+                        <br />
+                        <br />
+                        <br /><br />
                     </div>
                     {/*colum2*/}
                     <div className="col">
